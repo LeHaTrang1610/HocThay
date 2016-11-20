@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+/**
+ * 
+ */
+
+/**
+ * @author USER
+ * 
+ */
+public class tichHaiMaTran {
+
+	/**
+	 * @param args
+	 */
+
+	public void nhap(int a[][], int m, int n) {
+		Scanner reader = new Scanner(System.in);
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.println(" nhap phan tu thu a[" + i + "]");
+				a[i][j] = reader.nextInt();
+
+			}
+		}
+	}
+
+	public void xuat(int a[][], int m, int n) {
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.print(a[i][j]);
+			}
+			System.out.println();
+
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		tichHaiMaTran thmt = new tichHaiMaTran();
+		Scanner reader = new Scanner(System.in);
+		System.out.println(" nhap so luong dong cho ma tran thu nhat:");
+		int m1 = reader.nextInt();
+		System.out.println(" nhap so luong cot cho ma tran thu hai");
+		int n1 = reader.nextInt();
+		int a1[][] = new int[m1][n1];
+		thmt.nhap(a1, m1, n1);
+		thmt.xuat(a1, m1, n1);
+
+		System.out.println(" nhap so luong dong cho ma tran thu hai:");
+		int m2 = reader.nextInt();
+		System.out.println(" nhap so luong cot cho ma tran thu hai");
+		int n2 = reader.nextInt();
+		int a2[][] = new int[m2][n2];
+		thmt.nhap(a2, m2, n2);
+		thmt.xuat(a2, m2, n2);
+
+	}
+
+}
